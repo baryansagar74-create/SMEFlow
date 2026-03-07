@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMEFlow | Human Meets Automation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===== RESET ===== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html, body{
+    height:100%;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    overflow:hidden;
+    opacity:0;
+    transition:opacity 0.6s ease;
+}
+
+/* ===== HERO ===== */
+
+.hero{
+    position:relative;
+    height:100vh;
+    width:100%;
+    overflow:hidden;
+}
+
+.hero img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:contrast(95%) saturate(90%);
+}
+
+/* Dark overlay */
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.25));
+    z-index:1;
+}
+
+/* Grain texture */
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:url("https://www.transparenttextures.com/patterns/noise.png");
+    opacity:0.06;
+    pointer-events:none;
+    z-index:2;
+}
+
+/* Navigation */
+.nav{
+    position:absolute;
+    top:5%;
+    right:6%;
+    display:flex;
+    gap:40px;
+    font-weight:500;
+    z-index:3;
+}
+
+.nav a{
+    text-decoration:none;
+    color:white;
+    font-size:15px;
+    transition:opacity 0.3s ease;
+}
+
+.nav a:hover{
+    opacity:0.7;
+}
+
+/* Brand text */
+.giant-text{
+    position:absolute;
+    top:12%;
+    left:6%;
+    font-family:'Oswald',sans-serif;
+    font-size:140px;
+    color:rgba(255,255,255,0.85);
+    z-index:3;
+    animation:fadeUp 1.2s ease forwards;
+    opacity:0;
+}
+
+/* Tagline */
+.tagline{
+    position:absolute;
+    bottom:15%;
+    left:6%;
+    font-family:'Playfair Display',serif;
+    font-size:26px;
+    color:white;
+    z-index:3;
+    animation:fadeUp 1.8s ease forwards;
+    opacity:0;
+}
+
+/* Footer */
+.site-footer{
+    background:#6FA7A6;
+    text-align:center;
+    padding:25px;
+    font-weight:600;
+    font-size:14px;
+    color:#F5F3E7;
+    border-top:6px solid #CBBE9A;
+}
+
+/* Animation */
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Responsive */
+@media(max-width:900px){
+    .giant-text{
+        font-size:60px;
+    }
+    .tagline{
+        font-size:18px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+<img src="robot-hand.jpg" alt="Human and Robot Touch">
+
+<div class="nav">
+    <a href="Home_Page.html" class="page-link">Home</a>
+</div>
+
+<div class="giant-text">SMEFlow</div>
+
+<div class="tagline">
+    Where Human Vision Meets Intelligent Automation.
+</div>
+
+</section>
+
+<footer class="site-footer">
+© 2025 SMEFlow™ — Crafted with Precision. All Rights Reserved.
+</footer>
+
+<script>
+
+/* ===== FADE IN ON LOAD ===== */
+
+window.addEventListener("load", () => {
+    document.body.style.opacity = "1";
+});
+
+/* ===== PAGE TRANSITION ===== */
+
+document.querySelectorAll(".page-link").forEach(link => {
+    link.addEventListener("click", function(e){
+        e.preventDefault();
+
+        const target = this.href;
+
+        document.body.style.opacity = "0";
+
+        setTimeout(() => {
+            window.location.href = target;
+        }, 500);
+    });
+});
+
+</script>
+
+</body>
+</html>
