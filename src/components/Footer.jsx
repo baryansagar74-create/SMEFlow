@@ -64,7 +64,7 @@ function Footer() {
                         </svg>
                     </a>
                     <a href="#" onClick={handleComingSoon} aria-label="Instagram">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.instagram.com/smeflow2025">
                             <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                             <path d="M16 11.3701C16.1234 12.2024 15.9813 13.0523 15.5938 13.7991C15.2063 14.5459 14.5932 15.1515 13.8416 15.5298C13.0901 15.9081 12.2385 16.0408 11.4078 15.9084C10.5771 15.776 9.80562 15.3853 9.20177 14.7916C8.59792 14.1979 8.19231 13.4326 8.04419 12.6045C7.89606 11.7764 8.01331 10.9272 8.37936 10.1787C8.7454 9.43026 9.34267 8.82136 10.0847 8.43851C10.8267 8.05566 11.6754 7.91899 12.5118 8.04943C13.3934 8.18737 14.1936 8.6508 14.7738 9.35824C15.3539 10.0657 15.6781 10.9744 15.69 11.9001C15.6961 12.3663 15.6179 12.8277 15.46 13.2601" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                             <path d="M17.5 6.5H17.51" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
