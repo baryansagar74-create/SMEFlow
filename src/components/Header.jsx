@@ -65,7 +65,7 @@ function Header({ title }) {
                     <Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>ABOUT</Link>
                     <Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>CONTACT</Link>
                     {isAuthenticated && (
-                        <Link to="/dashboard" className={location.pathname === '/dashboard' ? 'active' : ''} style={{ color: "#F0B90B" }}>DASHBOARD</Link>
+                        <Link to="/admin" className={location.pathname === '/admin' ? 'active' : ''} style={{ color: "#F0B90B" }}>ADMIN</Link>
                     )}
                 </div>
 

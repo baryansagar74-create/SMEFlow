@@ -5,7 +5,7 @@ import React, { createContext, useState, useContext, useEffect } from 'react';
 const AuthContext = createContext(null);
 
 /* ===== DEFAULT ADMIN PASSWORD ===== */
-const DEFAULT_PASSWORD = 'smeflowadminArpit';
+const DEFAULT_PASSWORD = 'SME';
 
 /* ===== PROVIDER COMPONENT ===== */
 export const AuthProvider = ({ children }) => {

@@ -65,7 +65,7 @@ function App() {
                             {/* ===== STANDALONE ROUTES (no Layout wrapper) ===== */}
                             <Route path="/landing-page" element={<LandingPage />} />
                             <Route path="/login" element={<Login />} />
-                            <Route path="/dashboard" element={
+                            <Route path="/admin" element={
                                 <ProtectedRoute>
                                     <Dashboard />
                                 </ProtectedRoute>

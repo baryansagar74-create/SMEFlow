@@ -13,7 +13,7 @@ function Login() {
     const location = useLocation();
     const { showToast } = useToast();
 
-    const from = location.state?.from?.pathname || '/dashboard';
+    const from = location.state?.from?.pathname || '/admin';
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -90,7 +90,7 @@ function Login() {
                         boxShadow: '0 8px 15px rgba(0, 0, 0, 0.2), 0 5px 0px #A37A05',
                         transition: 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)'
                     }}>
-                        LOGIN TO DASHBOARD
+                        ACCESS ADMIN PANEL
                     </button>
                 </form>
             </motion.div>
