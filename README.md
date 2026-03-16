@@ -240,7 +240,7 @@ The admin panel is completely hidden from regular users — it doesn't appear in
 
 1. Navigate to `yoursite.com/admin`
 2. You'll be redirected to the login page automatically
-3. Enter the admin password *(default: `smeflowadminArpit` — change it immediately in Settings)*
+3. Enter the admin password 
 4. Once logged in, the **ADMIN** link appears in the navbar
 5. Manage inquiries, website content (pricing, team, FAQs), and settings from one panel
 
