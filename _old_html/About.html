@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMEFlow | About</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===== RESET ===== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#E9E2D0;
+    color:#2C3E3E;
+    line-height:1.7;
+}
+
+/* ===== GLOBAL HEADER SYSTEM ===== */
+
+.header{
+    background:#6FA7A6;
+    height:420px;
+    border-bottom:8px solid #CBBE9A;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+}
+
+.nav{
+    position:absolute;
+    top:40px;
+    display:flex;
+    gap:60px;
+    font-weight:600;
+    letter-spacing:2px;
+}
+
+.nav a{
+    text-decoration:none;
+    color:#F5F3E7;
+    font-size:14px;
+    transition:0.2s ease;
+}
+
+.nav a:hover{
+    opacity:0.8;
+}
+
+.badge{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    background:#2F5D6E;
+    color:#FFFFFF;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Oswald',sans-serif;
+    font-size:32px;
+    border:6px solid #F5F3E7;
+    margin-bottom:30px;
+}
+
+.retro-title{
+    font-family:'Oswald',sans-serif;
+    font-size:80px;
+    letter-spacing:8px;
+    color:#F5F3E7;
+}
+
+/* ===== HERO ===== */
+
+.hero{
+    padding:110px 10% 90px 10%;
+    text-align:center;
+    max-width:1000px;
+    margin:auto;
+}
+
+.hero h1{
+    font-family:'Oswald',sans-serif;
+    font-size:48px;
+    letter-spacing:3px;
+    margin-bottom:35px;
+}
+
+.hero p{
+    font-size:18px;
+    font-weight:600;
+}
+
+.divider{
+    width:120px;
+    height:4px;
+    background:#C64734;
+    margin:40px auto 0 auto;
+}
+
+/* ===== SECTION BLOCK ===== */
+
+.section-block{
+    background:#6FA7A6;
+    color:#F5F3E7;
+    padding:100px 10%;
+    text-align:center;
+}
+
+.section-block h2{
+    font-family:'Oswald',sans-serif;
+    font-size:42px;
+    letter-spacing:3px;
+    margin-bottom:35px;
+}
+
+.section-block p{
+    max-width:900px;
+    margin:0 auto 25px auto;
+    font-weight:600;
+}
+
+/* ===== GRID SECTION ===== */
+
+.grid-section{
+    padding:110px 8%;
+    text-align:center;
+}
+
+.grid-section h2{
+    font-family:'Oswald',sans-serif;
+    font-size:42px;
+    margin-bottom:70px;
+    letter-spacing:3px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:40px;
+}
+
+.card{
+    background:#FFFFFF;
+    padding:40px 30px;
+    border:6px solid #CBBE9A;
+    transition:all 0.3s ease;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+.card h3{
+    font-family:'Oswald',sans-serif;
+    margin-bottom:15px;
+    letter-spacing:2px;
+}
+
+.card p{
+    font-weight:600;
+    font-size:15px;
+}
+
+/* ===== VISION ===== */
+
+.vision{
+    padding:110px 10%;
+    text-align:center;
+    background:#F5F3E7;
+}
+
+.vision h2{
+    font-family:'Oswald',sans-serif;
+    font-size:42px;
+    margin-bottom:35px;
+    letter-spacing:3px;
+}
+
+.vision p{
+    max-width:900px;
+    margin:0 auto 25px auto;
+    font-weight:600;
+}
+
+/* ===== FOUNDER PERSPECTIVE ===== */
+
+.founder{
+    padding:110px 10%;
+    text-align:center;
+    background:#E9E2D0;
+    border-top:4px solid #CBBE9A;
+}
+
+.founder h2{
+    font-family:'Oswald',sans-serif;
+    font-size:42px;
+    margin-bottom:35px;
+    letter-spacing:3px;
+}
+
+.founder p{
+    max-width:900px;
+    margin:0 auto 25px auto;
+    font-weight:600;
+}
+
+/* ===== FOUNDING TEAM SECTION ===== */
+
+.team{
+    padding:120px 8%;
+    text-align:center;
+    background:#F5F3E7;
+    border-top:8px solid #CBBE9A;
+}
+
+.team h2{
+    font-family:'Oswald',sans-serif;
+    font-size:42px;
+    margin-bottom:70px;
+    letter-spacing:3px;
+}
+
+.team-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:50px;
+}
+
+.team-card{
+    background:#FFFFFF;
+    padding:50px 30px;
+    border:6px solid #CBBE9A;
+    transition:0.3s ease;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.team-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* NEW: Founder Image Styling */
+
+.team-img{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+    margin:0 auto 25px auto;
+    border:6px solid #6FA7A6;
+    display:block;
+}
+
+.team-name{
+    font-family:'Oswald',sans-serif;
+    font-size:26px;
+    margin-bottom:10px;
+    letter-spacing:2px;
+}
+
+.team-role{
+    font-weight:700;
+    color:#6FA7A6;
+    margin-bottom:20px;
+    font-size:14px;
+    letter-spacing:1px;
+}
+
+.team-card p{
+    font-weight:600;
+    font-size:14px;
+}
+
+/* ===== FOOTER ===== */
+
+.site-footer{
+    background:#6FA7A6;
+    text-align:center;
+    padding:30px;
+    font-weight:600;
+    font-size:14px;
+    color:#F5F3E7;
+    border-top:6px solid #CBBE9A;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:768px){
+
+.header{
+    height:320px;
+}
+
+.retro-title{
+    font-size:42px;
+    letter-spacing:4px;
+}
+
+.nav{
+    gap:25px;
+    font-size:12px;
+}
+
+.badge{
+    width:70px;
+    height:70px;
+    font-size:22px;
+}
+
+.hero h1{
+    font-size:30px;
+}
+
+.section-block h2,
+.grid-section h2,
+.vision h2,
+.founder h2,
+.team h2{
+    font-size:28px;
+}
+
+.team-img{
+    width:110px;
+    height:110px;
+}
+
+}
+
+.transition-overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#6F9FA0;
+z-index:9999;
+transform:translateY(100%);
+transition:transform 0.6s ease;
+}
+
+.transition-overlay.active{
+transform:translateY(0%);
+}
+
+</style>
+</head>
+<body>
+
+<div class="transition-overlay" id="pageTransition"></div>
+
+<section class="header">
+    <div class="nav">
+        <a href="Home_Page.html" class="nav-link">HOME</a>
+        <a href="Features.html" class="nav-link">FEATURES</a>
+        <a href="Pricing.html" class="nav-link">PRICING</a>
+        <a href="Contact.html" class="nav-link">CONTACT</a>
+    </div>
+    <div class="badge">SF</div>
+    <div class="retro-title">ABOUT SMEFLOW</div>
+</section>
+
+<section class="hero">
+    <h1>SMALL BUSINESSES DESERVE ENTERPRISE INTELLIGENCE</h1>
+    <p>
+        SMEFlow transforms operational chaos into organized digital systems.
+    </p>
+    <div class="divider"></div>
+</section>
+
+<section class="section-block">
+    <h2>OUR CORE PHILOSOPHY</h2>
+    <p>
+        Operational clarity drives sustainable growth.
+    </p>
+</section>
+
+<section class="grid-section">
+    <h2>WHY SMEFLOW IS DIFFERENT</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>MODULAR ARCHITECTURE</h3>
+            <p>Adopt what you need today. Expand as you grow tomorrow.</p>
+        </div>
+        <div class="card">
+            <h3>CONNECTED WORKFLOWS</h3>
+            <p>Leads, sales, tasks, and payments operate within one unified system.</p>
+        </div>
+        <div class="card">
+            <h3>AUTOMATION-FIRST DESIGN</h3>
+            <p>Rule-based triggers reduce human error and manual dependency.</p>
+        </div>
+        <div class="card">
+            <h3>AI-READY FOUNDATION</h3>
+            <p>Built to evolve into predictive analytics and intelligent insights.</p>
+        </div>
+    </div>
+</section>
+
+<section class="vision">
+    <h2>OUR VISION (3–5 YEARS)</h2>
+    <p>
+        SMEFlow aims to become a complete SME Operating System.
+    </p>
+</section>
+
+<section class="founder">
+    <h2>FOUNDER'S PERSPECTIVE</h2>
+    <p>
+        SMEFlow was created to democratize operational intelligence.
+    </p>
+</section>
+
+<!-- FOUNDERS SECTION WITH IMAGES -->
+
+<section class="team">
+    <h2>FOUNDING TEAM</h2>
+
+    <div class="team-grid">
+
+        <div class="team-card">
+            <img src="Person1.png" alt="Founder 1" class="team-img">
+            <div class="team-name">Vishu Kumar</div>
+            <div class="team-role">Co-Founder & CEO</div>
+            <p>
+                Visionary leader driving product direction, strategic growth,
+                and long-term expansion across global markets.
+            </p>
+        </div>
+
+        <div class="team-card">
+            <img src="Person2.png" alt="Founder 2" class="team-img">
+            <div class="team-name">Aryan Kumar</div>
+            <div class="team-role">Co-Founder & CTO</div>
+            <p>
+                Architect of the platform’s technical infrastructure,
+                automation systems, and scalable backend architecture.
+            </p>
+        </div>
+
+        <div class="team-card">
+            <img src="Person3.png" alt="Founder 3" class="team-img">
+            <div class="team-name">Vaibhav Virat</div>
+            <div class="team-role">Co-Founder & COO</div>
+            <p>
+                Oversees operations, execution strategy, and ensures
+                seamless integration between product and customer success.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<footer class="site-footer">
+    © 2025 SMEFlow™ — Automation. Structured Growth. All Rights Reserved.
+</footer>
+
+<script>
+
+const links = document.querySelectorAll(".nav-link");
+const overlay = document.getElementById("pageTransition");
+
+links.forEach(link=>{
+link.addEventListener("click",function(e){
+
+e.preventDefault();
+
+const target=this.href;
+
+overlay.classList.add("active");
+
+setTimeout(()=>{
+window.location.href=target;
+},600);
+
+});
+});
+
+</script>
+
+</body>
+</html>

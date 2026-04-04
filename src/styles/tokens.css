@@ -1,0 +1,101 @@
+/* ================================================================
+   SMEFlow Design System — CSS Custom Properties (Tokens)
+   Single source of truth for all visual values.
+   ================================================================ */
+
+:root {
+    /* ===== BRAND COLORS ===== */
+    --color-brand:          #2F5D6E;    /* Primary teal */
+    --color-brand-dark:     #1A3742;    /* Darker teal (hero bg) */
+    --color-brand-light:    #6FA7A6;    /* Lighter teal */
+    --color-brand-xlight:   #539493;    /* Even lighter teal */
+
+    --color-accent:         #CBBE9A;    /* Warm gold/cream */
+    --color-accent-dark:    #A89B77;    /* Dark accent */
+    --color-accent-darker:  #82785B;    /* Deeper accent (3D shadow) */
+
+    --color-danger:         #C64734;    /* Brand red */
+    --color-danger-dark:    #A23626;    /* Dark red */
+    --color-danger-shadow:  #75251a;    /* Red 3D shadow */
+
+    /* ===== BACKGROUNDS ===== */
+    --color-bg:             #E9E2D0;    /* Warm off-white body */
+    --color-bg-alt:         #D4CCB8;    /* Slightly darker body */
+    --color-surface:        #F5F3E7;    /* Card / box surface */
+    --color-surface-alt:    #FFFFFF;    /* Pure white surface */
+
+    /* ===== TEXT ===== */
+    --color-text:           #2C3E3E;    /* Primary body text */
+    --color-text-muted:     rgba(44, 62, 62, 0.6);
+    --color-text-light:     #F5F3E7;    /* On dark backgrounds */
+
+    /* ===== DASHBOARD (DARK PALETTE) ===== */
+    --dash-bg:              #0F1114;
+    --dash-surface-1:       #1A1D23;
+    --dash-surface-2:       #1E2128;
+    --dash-gold:            #F0B90B;
+    --dash-gold-dark:       #D4A008;
+    --dash-text:            #E8E6DF;
+    --dash-text-muted:      rgba(232, 230, 223, 0.45);
+    --dash-border:          rgba(255, 255, 255, 0.06);
+    --dash-border-hover:    rgba(255, 255, 255, 0.12);
+
+    /* ===== SEMANTIC COLORS ===== */
+    --color-success:        #22C55E;
+    --color-success-bg:     rgba(34, 197, 94, 0.12);
+    --color-warning:        #F59E0B;
+    --color-warning-bg:     rgba(245, 158, 11, 0.12);
+    --color-error:          #EF4444;
+    --color-error-bg:       rgba(239, 68, 68, 0.12);
+    --color-info:           #3B82F6;
+    --color-info-bg:        rgba(59, 130, 246, 0.12);
+
+    /* ===== TYPOGRAPHY ===== */
+    --font-sans:            'Inter', 'Segoe UI', system-ui, sans-serif;
+    --font-display:         'Oswald', sans-serif;
+    --font-serif:           'Playfair Display', Georgia, serif;
+
+    /* ===== SPACING SCALE (rem) ===== */
+    --space-1:  0.25rem;    /* 4px  */
+    --space-2:  0.5rem;     /* 8px  */
+    --space-3:  0.75rem;    /* 12px */
+    --space-4:  1rem;       /* 16px */
+    --space-5:  1.25rem;    /* 20px */
+    --space-6:  1.5rem;     /* 24px */
+    --space-8:  2rem;       /* 32px */
+    --space-10: 2.5rem;     /* 40px */
+    --space-12: 3rem;       /* 48px */
+    --space-16: 4rem;       /* 64px */
+    --space-20: 5rem;       /* 80px */
+    --space-24: 6rem;       /* 96px */
+
+    /* ===== BORDER RADIUS ===== */
+    --radius-xs:    4px;
+    --radius-sm:    6px;
+    --radius-md:    10px;
+    --radius-lg:    14px;
+    --radius-xl:    20px;
+    --radius-2xl:   28px;
+    --radius-full:  9999px;
+
+    /* ===== SHADOWS ===== */
+    --shadow-xs:    0 1px 4px rgba(0, 0, 0, 0.06);
+    --shadow-sm:    0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-md:    0 8px 24px rgba(0, 0, 0, 0.12);
+    --shadow-lg:    0 20px 40px rgba(0, 0, 0, 0.18);
+    --shadow-xl:    0 30px 60px rgba(0, 0, 0, 0.25);
+    --shadow-card:  0 10px 30px rgba(0, 0, 0, 0.08);
+
+    /* ===== TRANSITIONS ===== */
+    --transition-fast:   150ms ease;
+    --transition-base:   250ms ease;
+    --transition-slow:   400ms ease;
+    --transition-spring: 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    /* ===== Z-INDEX SCALE ===== */
+    --z-dropdown:   100;
+    --z-sticky:     200;
+    --z-modal:      1000;
+    --z-toast:      9999;
+    --z-loader:     99999;
+}

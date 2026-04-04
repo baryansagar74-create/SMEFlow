@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SMEFlow | Automated Follow-Ups</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===== RESET ===== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#E9E2D0;
+color:#2C3E3E;
+}
+
+/* ===== TRANSITION ===== */
+
+.transition-overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#6F9FA0;
+z-index:9999;
+transform:translateY(100%);
+transition:transform 0.6s ease;
+}
+
+.transition-overlay.active{
+transform:translateY(0%);
+}
+
+/* ===== HEADER ===== */
+
+.header{
+background:#6FA7A6;
+height:420px;
+border-bottom:8px solid #CBBE9A;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+position:relative;
+}
+
+/* NAV */
+
+.nav{
+position:absolute;
+top:40px;
+display:flex;
+gap:60px;
+font-weight:600;
+letter-spacing:2px;
+}
+
+.nav a{
+text-decoration:none;
+color:#F5F3E7;
+font-size:14px;
+}
+
+.nav a:hover{
+opacity:0.8;
+}
+
+/* BADGE */
+
+.badge{
+width:100px;
+height:100px;
+border-radius:50%;
+background:#2F5D6E;
+color:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+font-family:'Oswald';
+font-size:32px;
+border:6px solid #F5F3E7;
+margin-bottom:30px;
+}
+
+/* TITLE */
+
+.retro-title{
+font-family:'Oswald';
+font-size:70px;
+letter-spacing:8px;
+color:#F5F3E7;
+text-align:center;
+}
+
+/* ===== SECTION ===== */
+
+.section{
+padding:100px 6%;
+text-align:center;
+}
+
+.section h2{
+font-family:'Oswald';
+font-size:56px;
+letter-spacing:4px;
+margin-bottom:20px;
+}
+
+.section p{
+max-width:800px;
+margin:auto;
+margin-bottom:40px;
+font-weight:600;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+}
+
+/* CARD */
+
+.box{
+background:#F5F3E7;
+padding:40px;
+border-top:8px solid #C64734;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.box:hover{
+transform:translateY(-8px);
+}
+
+.box h3{
+font-family:'Oswald';
+margin-bottom:15px;
+}
+
+/* WORKFLOW */
+
+.workflow{
+background:#6FA7A6;
+color:#F5F3E7;
+}
+
+.workflow .box{
+background:#2F5D6E;
+border-top:8px solid #CBBE9A;
+}
+
+/* CTA */
+
+.cta{
+background:#C64734;
+color:white;
+padding:80px 6%;
+text-align:center;
+}
+
+.cta h2{
+font-family:'Oswald';
+font-size:50px;
+}
+
+.cta button{
+padding:15px 40px;
+background:#F5F3E7;
+color:#2F5D6E;
+font-weight:700;
+border:none;
+margin-top:20px;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+.site-footer{
+background:#6FA7A6;
+text-align:center;
+padding:25px;
+font-weight:600;
+font-size:14px;
+color:#F5F3E7;
+border-top:6px solid #CBBE9A;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="transition-overlay" id="pageTransition"></div>
+
+<!-- HEADER -->
+
+<section class="header">
+
+<div class="nav">
+<a href="index.html" class="nav-link">HOME</a>
+<a href="Features.html" class="nav-link">FEATURES</a>
+<a href="Pricing.html" class="nav-link">PRICING</a>
+<a href="About.html" class="nav-link">ABOUT</a>
+</div>
+
+<div class="badge">SF</div>
+
+<div class="retro-title">
+AUTOMATED FOLLOW-UPS
+</div>
+
+</section>
+
+<!-- INTRO -->
+
+<section class="section">
+
+<h2>NEVER MISS A CUSTOMER AGAIN</h2>
+
+<p>
+Many businesses lose customers simply because follow-ups are forgotten.
+SMEFlow automatically reminds your team, sends messages, and keeps
+every lead active in the pipeline.
+</p>
+
+</section>
+
+<!-- WORKFLOW -->
+
+<section class="section workflow">
+
+<h2>HOW AUTOMATION WORKS</h2>
+
+<div class="grid">
+
+<div class="box">
+<h3>LEAD CREATED</h3>
+<p>A new inquiry enters the system.</p>
+</div>
+
+<div class="box">
+<h3>AUTOMATIC TIMER</h3>
+<p>SMEFlow starts a follow-up timer.</p>
+</div>
+
+<div class="box">
+<h3>MESSAGE SENT</h3>
+<p>Automated reminder via email, SMS or WhatsApp.</p>
+</div>
+
+<div class="box">
+<h3>TEAM NOTIFIED</h3>
+<p>Your team receives alerts if action is required.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section class="section">
+
+<h2>AUTOMATION FEATURES</h2>
+
+<div class="grid">
+
+<div class="box">
+<h3>SCHEDULED FOLLOW-UPS</h3>
+<p>Automatically send follow-up messages after defined intervals.</p>
+</div>
+
+<div class="box">
+<h3>SMART REMINDERS</h3>
+<p>Notify team members when leads require attention.</p>
+</div>
+
+<div class="box">
+<h3>ESCALATION SYSTEM</h3>
+<p>If a lead is ignored, the system alerts managers.</p>
+</div>
+
+<div class="box">
+<h3>PAYMENT REMINDERS</h3>
+<p>Send automated reminders for pending invoices.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- IMPACT -->
+
+<section class="section">
+
+<h2>BUSINESS IMPACT</h2>
+
+<div class="grid">
+
+<div class="box">
+<h3>MORE CONVERSIONS</h3>
+<p>Timely follow-ups increase customer conversion rates.</p>
+</div>
+
+<div class="box">
+<h3>FASTER RESPONSES</h3>
+<p>Customers receive replies without delay.</p>
+</div>
+
+<div class="box">
+<h3>NO MISSED OPPORTUNITIES</h3>
+<p>Every lead stays active until it converts.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+<h2>LET AUTOMATION HANDLE THE FOLLOW-UPS</h2>
+
+<button>START FREE TRIAL</button>
+
+</section>
+
+<footer class="site-footer">
+
+© 2026 SMEFlow™. All Rights Reserved.
+
+</footer>
+
+<script>
+
+const links=document.querySelectorAll(".nav-link");
+const overlay=document.getElementById("pageTransition");
+
+links.forEach(link=>{
+link.addEventListener("click",function(e){
+
+e.preventDefault();
+
+const target=this.href;
+
+overlay.classList.add("active");
+
+setTimeout(()=>{
+window.location.href=target;
+},600);
+
+});
+});
+
+</script>
+
+</body>
+</html>

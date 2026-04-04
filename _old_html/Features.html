@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMEFlow | Features</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===== RESET ===== */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#E9E2D0;
+color:#2C3E3E;
+line-height:1.6;
+}
+
+/* ===== PAGE TRANSITION OVERLAY ===== */
+
+.transition-overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#6F9FA0;
+z-index:9999;
+transform:translateY(100%);
+transition:transform 0.6s ease;
+}
+
+.transition-overlay.active{
+transform:translateY(0%);
+}
+
+/* ===== GLOBAL HEADER SYSTEM ===== */
+
+.header{
+background:#6FA7A6;
+height:420px;
+border-bottom:8px solid #CBBE9A;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+position:relative;
+text-align:center;
+}
+
+/* Navigation */
+
+.nav{
+position:absolute;
+top:40px;
+display:flex;
+gap:60px;
+font-weight:600;
+letter-spacing:2px;
+}
+
+.nav a{
+text-decoration:none;
+color:#F5F3E7;
+font-size:14px;
+transition:0.2s ease;
+}
+
+.nav a:hover{
+opacity:0.8;
+}
+
+/* Logo Badge */
+
+.badge{
+width:100px;
+height:100px;
+border-radius:50%;
+background:#2F5D6E;
+color:#FFFFFF;
+display:flex;
+align-items:center;
+justify-content:center;
+font-family:'Oswald',sans-serif;
+font-size:32px;
+border:6px solid #F5F3E7;
+margin-bottom:30px;
+box-shadow:0 6px 0 rgba(0,0,0,0.15);
+}
+
+/* Main Title */
+
+.retro-title{
+font-family:'Oswald',sans-serif;
+font-size:80px;
+letter-spacing:8px;
+color:#F5F3E7;
+}
+
+/* ===== FEATURES SECTION ===== */
+
+.features-section{
+padding:100px 8%;
+text-align:center;
+}
+
+.section-title{
+font-family:'Oswald',sans-serif;
+font-size:54px;
+letter-spacing:4px;
+margin-bottom:15px;
+}
+
+.section-sub{
+font-weight:600;
+margin-bottom:70px;
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
+}
+
+/* GRID */
+
+.features-grid{
+display:grid;
+grid-template-columns:repeat(4, 1fr);
+gap:60px;
+}
+
+/* Center last two cards */
+
+.feature-card:nth-child(5){
+grid-column:2 / 3;
+}
+
+.feature-card:nth-child(6){
+grid-column:3 / 4;
+}
+
+/* FEATURE CARD */
+
+.feature-card{
+background:#F5F3E7;
+padding:45px 30px;
+border:6px solid #CBBE9A;
+transition:all 0.3s ease;
+box-shadow:0 8px 0 rgba(0,0,0,0.08);
+}
+
+.feature-card:hover{
+transform:translateY(-8px);
+box-shadow:0 12px 0 rgba(0,0,0,0.12);
+}
+
+.circle{
+width:110px;
+height:110px;
+border-radius:50%;
+background:#C64734;
+margin:0 auto 25px auto;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+color:#FFFFFF;
+font-weight:700;
+border:6px solid #6FA7A6;
+}
+
+.feature-card h3{
+font-family:'Oswald',sans-serif;
+font-size:22px;
+margin-bottom:15px;
+letter-spacing:2px;
+}
+
+.feature-card p{
+font-size:15px;
+font-weight:600;
+max-width:300px;
+margin:0 auto;
+}
+
+/* ===== CTA ===== */
+
+.cta{
+margin-top:100px;
+padding:80px 20px;
+background:#6FA7A6;
+border-top:8px solid #CBBE9A;
+text-align:center;
+}
+
+.cta h2{
+font-family:'Oswald',sans-serif;
+font-size:48px;
+color:#F5F3E7;
+margin-bottom:30px;
+letter-spacing:2px;
+}
+
+.cta button{
+background:#C64734;
+color:#FFFFFF;
+padding:16px 50px;
+font-weight:700;
+letter-spacing:2px;
+border:6px solid #F5F3E7;
+cursor:pointer;
+font-family:'Inter',sans-serif;
+transition:all 0.3s ease;
+box-shadow:0 6px 0 rgba(0,0,0,0.2);
+}
+
+.cta button:hover{
+transform:translateY(-4px);
+background:#2F5D6E;
+}
+
+.site-footer{
+background:#6FA7A6;
+text-align:center;
+padding:30px;
+font-weight:600;
+font-size:14px;
+color:#F5F3E7;
+border-top:6px solid #CBBE9A;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:1200px){
+
+.features-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.feature-card:nth-child(5),
+.feature-card:nth-child(6){
+grid-column:auto;
+}
+
+}
+
+@media(max-width:768px){
+
+.header{
+height:320px;
+}
+
+.retro-title{
+font-size:42px;
+letter-spacing:4px;
+}
+
+.nav{
+gap:25px;
+font-size:12px;
+}
+
+.badge{
+width:70px;
+height:70px;
+font-size:22px;
+}
+
+.section-title{
+font-size:36px;
+}
+
+.cta h2{
+font-size:32px;
+}
+
+.features-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+.feature-link{
+text-decoration:none;
+color:inherit;
+display:block;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- PAGE TRANSITION -->
+<div class="transition-overlay" id="pageTransition"></div>
+
+<!-- HEADER -->
+<section class="header">
+
+<div class="nav">
+<a href="Home_Page.html" class="nav-link">HOME</a>
+<a href="Pricing.html" class="nav-link">PRICING</a>
+<a href="About.html" class="nav-link">ABOUT</a>
+<a href="Contact.html" class="nav-link">CONTACT</a>
+</div>
+
+<div class="badge">SF</div>
+<div class="retro-title">FEATURES</div>
+
+</section>
+
+<!-- FEATURES -->
+<section class="features-section">
+
+<h2 class="section-title">WHAT SMEFLOW OFFERS</h2>
+
+<div class="section-sub">
+A modular automation platform built to help small and medium businesses
+streamline operations, increase revenue visibility, and scale efficiently.
+</div>
+
+<div class="features-grid">
+
+<a href="Lead_Management.html" class="feature-link">
+
+<div class="feature-card">
+<div class="circle">L</div>
+<h3>LEAD MANAGEMENT</h3>
+<p>Centralize and organize customer inquiries with structured tracking and conversion visibility.</p>
+</div>
+
+</a>
+
+<div class="feature-card">
+<div class="circle">F</div>
+<h3>AUTOMATED FOLLOW UPS</h3>
+<p>Rule-based reminders and smart notifications ensure no opportunity or payment is missed.</p>
+</div>
+
+<div class="feature-card">
+<div class="circle">S</div>
+<h3>SALES PIPELINE</h3>
+<p>Stage-based deal management that provides clear forecasting and performance insights.</p>
+</div>
+
+<div class="feature-card">
+<div class="circle">T</div>
+<h3>TASK MANAGEMENT</h3>
+<p>Assign responsibilities, monitor deadlines, and maintain internal workflow clarity.</p>
+</div>
+
+<div class="feature-card">
+<div class="circle">B</div>
+<h3>BILLING & PAYMENTS</h3>
+<p>Generate invoices, track collections, and maintain financial transparency in one place.</p>
+</div>
+
+<div class="feature-card">
+<div class="circle">D</div>
+<h3>DASHBOARD & ANALYTICS</h3>
+<p>Real-time operational insights that convert raw data into actionable business intelligence.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+<section class="cta">
+<h2>READY TO STRUCTURE YOUR BUSINESS?</h2>
+<button>GET STARTED</button>
+</section>
+
+<footer class="site-footer">
+© 2025 SMEFlow™ — Crafted with Precision. All Rights Reserved.
+</footer>
+
+<script>
+
+/* PAGE TRANSITION */
+
+const links = document.querySelectorAll(".nav-link");
+const overlay = document.getElementById("pageTransition");
+
+links.forEach(link=>{
+link.addEventListener("click",function(e){
+
+e.preventDefault();
+
+const target=this.href;
+
+overlay.classList.add("active");
+
+setTimeout(()=>{
+window.location.href=target;
+},600);
+
+});
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMEFlow | Pricing</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===== RESET ===== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#E9E2D0;
+    color:#2C3E3E;
+}
+
+/* ===== GLOBAL HEADER SYSTEM ===== */
+
+.header{
+    background:#6FA7A6;
+    height:420px;
+    border-bottom:8px solid #CBBE9A;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+}
+
+/* Navigation */
+
+.nav{
+    position:absolute;
+    top:40px;
+    display:flex;
+    gap:60px;
+    font-weight:600;
+    letter-spacing:2px;
+}
+
+.nav a{
+    text-decoration:none;
+    color:#F5F3E7;
+    font-size:14px;
+    transition:0.2s ease;
+}
+
+.nav a:hover{
+    opacity:0.8;
+}
+
+/* Logo Badge */
+
+.badge{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    background:#2F5D6E;
+    color:#FFFFFF;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Oswald',sans-serif;
+    font-size:32px;
+    border:6px solid #F5F3E7;
+    margin-bottom:30px;
+}
+
+/* Main Title */
+
+.retro-title{
+    font-family:'Oswald',sans-serif;
+    font-size:80px;
+    letter-spacing:8px;
+    color:#F5F3E7;
+}
+
+/* ===== HERO ===== */
+
+.pricing-hero{
+    background:#C64734;
+    padding:90px 20px;
+    text-align:center;
+    color:#F5E6C8;
+}
+
+.pricing-hero h1{
+    font-family:'Playfair Display',serif;
+    font-size:72px;
+    letter-spacing:4px;
+}
+
+.pricing-hero p{
+    margin-top:20px;
+    font-weight:600;
+    letter-spacing:2px;
+}
+
+/* ===== PRICING ===== */
+
+.pricing-section{
+    padding:100px 6%;
+}
+
+.pricing-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:50px;
+}
+
+/* Pricing Card */
+
+.pricing-card{
+    background:#6FA7A6;
+    padding:50px 30px;
+    border:8px solid #F5F3E7;
+    text-align:center;
+    position:relative;
+    transition:0.3s ease;
+    box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
+.pricing-card:hover{
+    transform:translateY(-8px);
+}
+
+.pricing-card h2{
+    font-family:'Oswald',sans-serif;
+    font-size:34px;
+    letter-spacing:2px;
+    color:#F5F3E7;
+    margin-bottom:10px;
+}
+
+.plan-sub{
+    font-size:14px;
+    margin-bottom:25px;
+    color:#F5F3E7;
+    opacity:0.9;
+}
+
+.price{
+    font-family:'Playfair Display',serif;
+    font-size:52px;
+    color:#F5E6C8;
+    margin-bottom:20px;
+}
+
+.price span{
+    font-size:16px;
+    font-family:'Inter',sans-serif;
+}
+
+.pricing-card ul{
+    list-style:none;
+    margin:30px 0;
+}
+
+.pricing-card ul li{
+    margin:12px 0;
+    font-weight:600;
+    font-size:14px;
+    color:#F5F3E7;
+}
+
+/* Button */
+
+.button{
+    display:inline-block;
+    padding:12px 30px;
+    background:#CBBE9A;
+    color:#2F5D6E;
+    font-weight:700;
+    letter-spacing:2px;
+    text-decoration:none;
+    transition:0.3s ease;
+}
+
+.button:hover{
+    background:#F5F3E7;
+}
+
+/* Highlight Growth Plan */
+
+.highlight{
+    background:#2F5D6E;
+    transform:scale(1.05);
+}
+
+.highlight:hover{
+    transform:scale(1.08);
+}
+
+/* Most Popular Ribbon */
+
+.ribbon{
+    position:absolute;
+    top:-15px;
+    right:-15px;
+    background:#C64734;
+    color:#F5F3E7;
+    padding:8px 15px;
+    font-size:12px;
+    font-weight:700;
+    transform:rotate(10deg);
+    letter-spacing:1px;
+}
+
+/* ===== AI SECTION ===== */
+
+.ai-section{
+    background:#CBBE9A;
+    padding:100px 6%;
+    text-align:center;
+}
+
+.ai-section h2{
+    font-family:'Oswald',sans-serif;
+    font-size:50px;
+    margin-bottom:20px;
+    letter-spacing:4px;
+}
+
+.ai-section p{
+    max-width:700px;
+    margin:0 auto 30px auto;
+    font-weight:600;
+}
+
+.ai-price{
+    font-family:'Playfair Display',serif;
+    font-size:42px;
+    color:#C64734;
+    margin-top:20px;
+}
+
+/* ===== FOOTER ===== */
+
+.site-footer{
+    background:#6FA7A6;
+    text-align:center;
+    padding:25px;
+    font-weight:600;
+    font-size:14px;
+    color:#F5F3E7;
+    border-top:6px solid #CBBE9A;
+    margin-top:60px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:768px){
+
+.header{
+    height:320px;
+}
+
+.retro-title{
+    font-size:42px;
+    letter-spacing:4px;
+}
+
+.nav{
+    gap:25px;
+}
+
+.badge{
+    width:70px;
+    height:70px;
+    font-size:22px;
+}
+
+.pricing-hero h1{
+    font-size:42px;
+}
+
+}
+
+/* ===== PAGE TRANSITION OVERLAY ===== */
+
+.transition-overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#6F9FA0;
+z-index:9999;
+transform:translateY(100%);
+transition:transform 0.6s ease;
+}
+
+.transition-overlay.active{
+transform:translateY(0%);
+}
+
+</style>
+</head>
+<body>
+
+<div class="transition-overlay" id="pageTransition"></div>
+
+<section class="header">
+    <div class="nav">
+        <a href="Home_Page.html" class="nav-link">HOME</a>
+        <a href="Features.html" class="nav-link">FEATURES</a>
+        <a href="About.html" class="nav-link">ABOUT</a>
+        <a href="Contact.html" class="nav-link">CONTACT</a>
+        
+    </div>
+    <div class="badge">SF</div>
+    <div class="retro-title">SMEFLOW</div>
+</section>
+
+<section class="pricing-hero">
+    <h1>PRICING</h1>
+    <p>SCALABLE PLANS FOR STRUCTURED BUSINESS GROWTH</p>
+</section>
+
+<section class="pricing-section">
+
+<div class="pricing-grid">
+
+    <div class="pricing-card">
+        <h2>STARTER</h2>
+        <div class="plan-sub">Perfect for Solo Operators</div>
+        <div class="price">$9 <span>/month</span></div>
+        <ul>
+            <li>Lead Management</li>
+            <li>Follow-Up Automation</li>
+            <li>Basic Dashboard</li>
+            <li>Up to 3 Users</li>
+        </ul>
+        <a href="#" class="button">GET STARTED</a>
+    </div>
+
+    <div class="pricing-card highlight">
+        <div class="ribbon">MOST POPULAR</div>
+        <h2>GROWTH</h2>
+        <div class="plan-sub">For Growing Teams</div>
+        <div class="price">$19 <span>/month</span></div>
+        <ul>
+            <li>Everything in Starter</li>
+            <li>Sales Pipeline</li>
+            <li>Task Management</li>
+            <li>Advanced Reporting</li>
+            <li>Up to 10 Users</li>
+        </ul>
+        <a href="#" class="button">UPGRADE NOW</a>
+    </div>
+
+    <div class="pricing-card">
+        <h2>PRO</h2>
+        <div class="plan-sub">Complete Operational Control</div>
+        <div class="price">$39 <span>/month</span></div>
+        <ul>
+            <li>Everything in Growth</li>
+            <li>Billing & Payments</li>
+            <li>Advanced Automation</li>
+            <li>Priority Support</li>
+            <li>25 Users</li>
+        </ul>
+        <a href="#" class="button">GO PRO</a>
+    </div>
+
+</div>
+
+</section>
+
+<section class="ai-section">
+    <h2>SMEFLOW AI</h2>
+    <p>
+        Add predictive intelligence to your workflow — conversion scoring,
+        revenue forecasting, and smart automation insights.
+    </p>
+    <div class="ai-price">$15 /month Add-On</div>
+</section>
+
+<footer class="site-footer">
+    © 2025 SMEFlow™ — Structured Automation for Modern SMEs.
+</footer>
+
+<script>
+
+const links = document.querySelectorAll(".nav-link");
+const overlay = document.getElementById("pageTransition");
+
+links.forEach(link=>{
+link.addEventListener("click",function(e){
+
+e.preventDefault();
+
+const target=this.href;
+
+overlay.classList.add("active");
+
+setTimeout(()=>{
+window.location.href=target;
+},600);
+
+});
+});
+
+</script>
+
+</body>
+</html>
